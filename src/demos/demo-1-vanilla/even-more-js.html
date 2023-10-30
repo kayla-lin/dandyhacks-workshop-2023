@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Javascript</title>
+  </head>
+  <body>
+    <span id="counted-1">Counter 1:</span>
+    <button id="counter-1">Count up</button>
+    <span id="counted-2">Counter 2:</span>
+    <button id="counter-2">Count up</button>
+  </body>
+  <script>
+    let count = 0;
+
+    // 1. Access HTML elements by grabbing it by some sort of
+    // identifier.
+    const countedText1 = document.getElementById("counted-1");
+    const counter1 = document.getElementById("counter-1");
+
+    // 2. Change the property of HTML element
+    function setCountedText() {
+      countedText1.innerText = "Counter 1: " + count;
+    }
+
+    // On initial load, set the text to the count
+    setCountedText();
+
+    // Add an event listener, which waits for an event to run a function
+    counter1.addEventListener("click", function onClick(e) {
+      count++;
+      setCountedText();
+    });
+
+    // 1. Access HTML elements by grabbing it by some sort of
+    // identifier.
+    const countedText2 = document.getElementById("counted-2");
+    const counter2 = document.getElementById("counter-2");
+
+    // 2. Change the property of HTML element
+    function setCountedText2() {
+      countedText2.innerText = "Counter 1: " + count;
+    }
+
+    // On initial load, set the text to the count
+    setCountedText2();
+
+    // Add an event listener, which waits for an event to run a function
+    counter2.addEventListener("click", function onClick(e) {
+      count++;
+      setCountedText2();
+    });
+  </script>
+</html>
